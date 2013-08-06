@@ -127,7 +127,7 @@ endif
 
 " 自動バックアップ {{{1
 set backup
-set backupdir=~/.vim/backup
+set backupdir=~/.vimbackup
 if has( "autocmd" )
 	autocmd vimrc BufWritePre * call UpdateBackupFile()
 	function! UpdateBackupFile()
