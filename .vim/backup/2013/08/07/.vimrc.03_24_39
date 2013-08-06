@@ -131,7 +131,7 @@ set backupdir=~/.vimbackup
 if has( "autocmd" )
 	autocmd vimrc BufWritePre * call UpdateBackupFile()
 	function! UpdateBackupFile()
-		let dir = strftime(backupdir."/%Y/%m/%d", localtime())
+		let dir = strftime("~/.vim/backup/%Y/%m/%d", localtime())
 		if !isdirectory(dir)
 			let retval = system("mkdir -p ".dir)
 			let retval = system("chown sumimau:staff ".dir)
