@@ -5,17 +5,20 @@ SAVEHIST=10000
 autoload -U compinit
 compinit
 
-export PATH=/usr/local/texlive/2012/bin/x86_64-darwin:$PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=/Users/sumimau/bin:$PATH
+case ${OSTYPE} in
+darwin*)
+	export PATH=/usr/local/texlive/2012/bin/x86_64-darwin:$PATH
+	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+	export PATH=/Users/sumimau/bin:$PATH
+	alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
+	alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+	export MY_DEPENDENCE="/Users/sumimau/Dropbox/Dependence/"
+	;;
+esac
 
-alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 export EDITOR=vim
 export SVN_EDITOR=vim
 export LANG=ja_JP.UTF-8
-
-export MY_DEPENDENCE="/Users/sumimau/Dropbox/Dependence/"
 
 autoload colors
 colors
@@ -40,14 +43,22 @@ esac
 
 export LSCOLORS=exFxCxdxBxegedabagacad
 
-alias ls="ls -GwFh"
+case ${OSTYPE} in
+darwin*)
+	alias ls="ls -GwFh"
+	alias glcc="gcc -m32 -framework Foundation -framework OpenGL -framework GLUT"
+	alias ldd="otool -L"
+	;;
+linux*)
+	alias ls="ls --color --block-size=M"
+	;;
+esac
+
 alias la="ls -la"
 alias ll="ls -l"
 alias javac="javac -encoding utf-8 -J-Dfile.encoding=UTF-8"
 alias java="java -Dfile.encoding=UTF-8"
-alias glcc="gcc -m32 -framework Foundation -framework OpenGL -framework GLUT"
 alias clang++11="clang++ -std=gnu++11 -stdlib=libc++"
-alias ldd="otool -L"
 alias reload="source ~/.zshrc"
 
 setopt auto_list
