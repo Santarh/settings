@@ -13,6 +13,9 @@ darwin*)
 	alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 	alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 	export MY_DEPENDENCE="/Users/sumimau/Dropbox/Dependence/"
+	## rvm
+	[[ -s "/Users/sumimau/.rvm/scripts/rvm" ]] && source "/Users/sumimau/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+	PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 	;;
 esac
 
@@ -74,10 +77,6 @@ unsetopt promptcr
 
 ## auto ls
 ##function chpwd() { ll }
-
-## rvm
-[[ -s "/Users/sumimau/.rvm/scripts/rvm" ]] && source "/Users/sumimau/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 #=============================
 # source zsh-syntax-highlighting
