@@ -56,10 +56,12 @@ esac
 
 alias la="ls -la"
 alias ll="ls -l"
+alias reload="source ~/.zshrc"
+alias findgrep="find . | grep"
+
 alias javac="javac -encoding utf-8 -J-Dfile.encoding=UTF-8"
 alias java="java -Dfile.encoding=UTF-8"
 alias clang++11="clang++ -std=gnu++11 -stdlib=libc++"
-alias reload="source ~/.zshrc"
 
 setopt auto_list
 setopt auto_cd
