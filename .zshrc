@@ -58,6 +58,7 @@ alias la="ls -la"
 alias ll="ls -l"
 alias reload="source ~/.zshrc"
 alias findgrep="find . | grep"
+alias pingoo="ping www.google.com"
 
 alias javac="javac -encoding utf-8 -J-Dfile.encoding=UTF-8"
 alias java="java -Dfile.encoding=UTF-8"

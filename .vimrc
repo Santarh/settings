@@ -25,6 +25,7 @@ noremap gk k
 " set {{{1
 set ttimeoutlen=10
 set tabstop=4
+set shiftwidth=4
 set tabpagemax=100
 set modelines=5
 set nocompatible
