@@ -10,8 +10,8 @@ darwin*)
 	export PATH=/usr/local/texlive/2012/bin/x86_64-darwin:$PATH
 	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 	export PATH=/Users/sumimau/bin:$PATH
-	alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
-	alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+#	alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
+#	alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 	export MY_DEPENDENCE="/Users/sumimau/Dropbox/Dependence/"
 	;;
 esac
