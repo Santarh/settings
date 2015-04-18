@@ -9,6 +9,7 @@ case ${OSTYPE} in
 darwin*)
 	export PATH=/usr/local/texlive/2012/bin/x86_64-darwin:$PATH
 	export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+	export PATH=/usr/local/Cellar/ruby/2.1.1/bin:$PATH
 	export PATH=/Users/sumimau/bin:$PATH
 #	alias vi="/Applications/MacVim.app/Contents/MacOS/Vim"
 #	alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
@@ -60,8 +61,8 @@ alias reload="source ~/.zshrc"
 alias findgrep="find . | grep"
 alias pingoo="ping www.google.com"
 
-alias javac="javac -encoding utf-8 -J-Dfile.encoding=UTF-8"
-alias java="java -Dfile.encoding=UTF-8"
+#alias javac="javac -encoding utf-8 -J-Dfile.encoding=UTF-8"
+#alias java="java -Dfile.encoding=UTF-8"
 alias clang++11="clang++ -std=gnu++11 -stdlib=libc++"
 
 setopt auto_list
